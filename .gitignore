@@ -1,0 +1,14 @@
+.vscode
+node_modules
+__pycache__
+package-lock.json
+camera*.m3u8
+camera*
+output-detect*
+output*.png
+!output-detect.png
+config-server.js
+config-app.js
+!config-app.js.template
+!config-server.js.template
+notes.md

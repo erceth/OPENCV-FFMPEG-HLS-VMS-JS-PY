@@ -1,0 +1,20 @@
+{
+  "name": "hls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.5.1",
+    "express": "^4.17.1",
+    "hls.js": "^0.14.17",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "motion-pedestrian-detection": "git+https://github.com/erceth/motion-pedestrian-detection.git"
+  }
+}

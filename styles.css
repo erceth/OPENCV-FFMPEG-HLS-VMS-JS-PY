@@ -1,0 +1,38 @@
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-player {
+  flex: 1 0 21%;
+  height: 600px;
+}
+
+video {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+}
+
+.history {
+  height: 300px;
+  overflow: auto;
+}
+
+.controls {
+  display: flex;
+}
+
+.action {
+  flex: 1;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+}
+
+.detect {
+  box-shadow: inset 0 0 0 2px red;
+  color: red;
+}

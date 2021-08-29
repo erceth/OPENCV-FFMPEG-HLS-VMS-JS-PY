@@ -1,0 +1,10 @@
+const config = {
+  cameras: [
+    {
+      index: 0
+    },
+    {
+      index: 1
+    }
+  ]
+};
