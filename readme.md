@@ -65,8 +65,8 @@ module.exports = {
       ip: '192.168.1.88', // ip address of ip camera
       path: '/axis-media/media.amp?resolution=640x480', 
       detectParameters: {
-        inputFps: 3, // frames per second input stream is converted to
-        detectFps: 2, // frames per second detection algorithm is run (yes, it can be different than inputFps)
+        inputFps: 15, // frames per second input stream is converted to
+        detectFps: 5, // frames per second detection algorithm is run (careful setting this too high)
         width: 640, // The width of the resolution of the RTSP stream. If outputs looks garbled, this setting might be wrong.
         height: 480, // The height of the resolution of the RTSP stream. If outputs looks garbled, this setting might be wrong.
         minPixelSize: 5000, // The minimum pixel size an object needs to be in order to detect motion. All objects smaller than this will be ignored. May need to adjust as height and width change.

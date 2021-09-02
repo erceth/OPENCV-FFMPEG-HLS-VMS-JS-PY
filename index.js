@@ -20,6 +20,18 @@ const {
 } = config.general;
 
 _.forEach(config.cameras, (cam, index) => {
+  delayStart(cam, index);
+});
+
+// spreads out the initial start
+function delayStart(cam, index) {
+  setTimeout(() => {
+    startStream(cam, index)
+  }, index * 1000);
+}
+
+function startStream (cam, index) {
+  console.log('starting stream' + index);
   removeOldRecordings(index);
 
   const outputDetect = `output-detect${index}.png`;
@@ -124,7 +136,7 @@ _.forEach(config.cameras, (cam, index) => {
   detectSpawn.on('exit', (code) => {
     console.log(`detectSpawn exited with code ${code}`);
   });
-});
+};
 
 app.get('/detect', (req, res) => {
   res.json(TSFilesWithDetection);

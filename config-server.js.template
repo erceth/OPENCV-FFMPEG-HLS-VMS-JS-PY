@@ -2,14 +2,18 @@ module.exports = {
   general: {
     segmentTime: 4,
     listSize: 1440,
-    pythonPath: "/Users/eric/.pyenv/versions/cv-3.6.10/bin/python3"
+    pythonPath: "/home/dtek/.virtualenvs/cv/bin/python",
+    imshow: 0,
+    writeOutput: 0,
+    writeTransparentOutput: 1
   },
   cameras: [
     {
       ip: 'wowzaec2demo.streamlock.net',
       path: '/vod/mp4:BigBuckBunny_115k.mov',
       detectParameters: {
-        detectFps: 2,
+        inputFps: 5,
+        detectFps: 3,
         width: 240,
         height: 160,
         minPixelSize: 5000,
@@ -28,7 +32,8 @@ module.exports = {
       ip: '192.168.7.88',
       path: '/axis-media/media.amp?resolution=640x480',
       detectParameters: {
-        detectFps: 2,
+        inputFps: 5,
+        detectFps: 3,
         width: 640,
         height: 480,
         minPixelSize: 5000,

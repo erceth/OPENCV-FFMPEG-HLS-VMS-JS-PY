@@ -15,6 +15,6 @@
     "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "motion-pedestrian-detection": "git+https://github.com/erceth/motion-pedestrian-detection.git"
+    "motion-pedestrian-detection": "git@github.com:erceth/motion-pedestrian-detection.git"
   }
 }
