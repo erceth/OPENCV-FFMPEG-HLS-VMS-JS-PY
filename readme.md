@@ -24,7 +24,8 @@ While FFMPEG is live streaming, images are extracted from the stream to perform 
 Pedestrian detection only occurs in parts of the video where motion is detected. This saves CPU processing. See [https://github.com/erceth/motion-pedestrian-detection](https://github.com/erceth/motion-pedestrian-detection).
 
 ## Video Explanation
-TODO
+[https://youtu.be/ei9Bki-CbU4](https://youtu.be/ei9Bki-CbU4).
+
 
 ## Dependencies
 > Other version may be compatible. These are the versions I used.

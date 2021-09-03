@@ -20,7 +20,7 @@ const {
 } = config.general;
 
 _.forEach(config.cameras, (cam, index) => {
-  delayStart(cam, index);
+  startStream(cam, index);
 });
 
 // spreads out the initial start
@@ -65,12 +65,12 @@ function startStream (cam, index) {
   
   const command = [
     '-i', `${streamInput}`,
-    '-loop', 1, '-f', 'image2', '-i', `output-detect${index}.png`, 
+    '-loop', 1, '-f', 'image2', '-i', `output-detect${index}.png`, // transparent image
     '-filter_complex', `[0:v]fps=${inputFps}[slow];[slow][1:v]overlay`, '-c:v', 'libx264', '-crf', '23', '-preset', 'veryfast', '-g', '30', '-sc_threshold', 0, '-c:a', 'aac', '-b:a', '128k', '-ac', 2, /* '-maxrate', '550k', '-bufsize', '1000k', */'-f', 'hls', '-hls_time', segmentTime, '-hls_list_size', listSize, '-hls_delete_threshold', 1, '-hls_flags', 'independent_segments+delete_segments+append_list+temp_file+program_date_time', '-strftime', 1, '-strftime_mkdir', 1, '-hls_segment_filename', `camera${index}/%Y/%m/%d/%Y-%m-%dT%H:%M:%S.ts`, `camera${index}.m3u8`,
     '-map', '0:v', '-f', 'image2pipe', '-vf', `fps=${detectFps}`, '-pix_fmt', 'bgr24', '-vcodec', 'rawvideo', '-an', 'pipe:1'];
 
   if (cam.input) {
-    command.unshift('-re')
+    command.unshift('-re', '-stream_loop', -1)
   }
 
   // const stringCommand = command.join(' ');

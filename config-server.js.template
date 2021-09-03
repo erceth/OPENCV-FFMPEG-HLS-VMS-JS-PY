@@ -12,7 +12,7 @@ module.exports = {
       ip: 'wowzaec2demo.streamlock.net',
       path: '/vod/mp4:BigBuckBunny_115k.mov',
       detectParameters: {
-        inputFps: 5,
+        inputFps: 30,
         detectFps: 3,
         width: 240,
         height: 160,
@@ -32,7 +32,7 @@ module.exports = {
       ip: '192.168.7.88',
       path: '/axis-media/media.amp?resolution=640x480',
       detectParameters: {
-        inputFps: 5,
+        inputFps: 30,
         detectFps: 3,
         width: 640,
         height: 480,
